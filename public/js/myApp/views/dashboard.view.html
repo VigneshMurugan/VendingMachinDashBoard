@@ -1,0 +1,183 @@
+<div id="dashboardCards" class="cards">
+<md-content class="md-padding" layout-xs="row" layout="row">
+          <div flex-xs flex-gt-xs="100" layout="row">
+            <md-card class="md-class-indicator">
+              <md-card-title-media class="md-class-indicator_title" >
+                <div flex-xs flex-gt-xs="30" layout="row">
+
+                </div>
+                <!-- <img src="images/Indicator1.png" class="md-class-indicator_img"> -->
+              </md-card-title-media>
+
+              <md-card-title class="md-class-indicator_title">
+
+                <md-card-title-text>
+                  <span class="md-headline span_align" id="first">3400 </span>
+
+                </md-card-title-text>
+                <md-card-title-text>
+                  <span class="first">Device Installs</span>
+
+                </md-card-title-text>
+              </md-card-title>
+            </md-card>
+            <md-card class="md-class-indicator">
+              <md-card-title-media class="md-class-indicator_title" >
+                <div flex-xs flex-gt-xs="30" layout="row">
+
+                </div>
+                <!-- <img src="images/Indicator1.png" class="md-class-indicator_img"> -->
+              </md-card-title-media>
+
+              <md-card-title class="md-class-indicator_title">
+
+                <md-card-title-text>
+                  <span class="md-headline span_align" id="second">30</span>
+
+                </md-card-title-text>
+                <md-card-title-text>
+                  <span class="second">Customers</span>
+
+                </md-card-title-text>
+              </md-card-title>
+            </md-card>
+
+            <md-card class="md-class-indicator">
+              <md-card-title-media class="md-class-indicator_title">
+                <!-- <img src="images/Indicator3.png"class="md-class-indicator_img"> -->
+              </md-card-title-media>
+              <md-card-title class="md-class-indicator_title">
+                <md-card-title-text>
+                  <span class="md-headline span_align" id="third">10</span>
+                </md-card-title-text>
+                <md-card-title-text>
+                  <span class="third">Units Mismatch</span>
+                </md-card-title-text>
+              </md-card-title>
+            </md-card>
+            <md-card class="md-class-indicator">
+              <md-card-title-media class="md-class-indicator_title" >
+                <div flex-xs flex-gt-xs="30" layout="row">
+
+                </div>
+                <!-- <img src="images/Indicator1.png" class="md-class-indicator_img"> -->
+              </md-card-title-media>
+
+              <md-card-title class="md-class-indicator_title">
+
+                <md-card-title-text>
+                  <span class="md-headline span_align"id="fourth">50</span>
+
+                </md-card-title-text>
+                <md-card-title-text>
+                  <span class="fourth">Equipment With ZERO Pour</span>
+
+                </md-card-title-text>
+              </md-card-title>
+            </md-card>
+          </div>
+        </md-content>
+
+</div>
+
+
+
+<div id="dashboardView">
+
+	<div id="filters" class="row">
+			<div class="col-md-3 col-lg-3" style="height:100%;padding-left:2%">
+				<span class=" filterName">Country :</span>
+				<div class="btn-group filterButtonDiv" >
+			      <button type="button" class="btn btn-default dropDownButton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			       <span>{{selectedCountry}}</span> <span class="caret"></span>
+			      </button>
+			      <ul class="dropdown-menu">
+			        <li><a href="" ng-repeat="country in countryKeys" ng-click="updateCountry(country)">{{country}}</a></li>
+			      </ul>
+			    </div>
+			</div>
+
+
+			<div class="col-md-3 col-lg-3" style="height:100%;padding-left:2%">
+				<span class=" filterName">Region :</span>
+			     <div class="btn-group  filterButtonDiv" >
+			      <button type="button" class="btn btn-default dropDownButton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        {{selectedRegion}}<span class="caret"></span>
+			      </button>
+			      <ul class="dropdown-menu">
+			        <li><a href="" ng-repeat="region in regionsKeys" ng-click="updateRegion(region)">{{region}}</a></li>
+			      </ul>
+			    </div>
+			</div>
+
+			<div class="col-md-3 col-lg-3" style="height:100%;padding-left:2%">
+				<span class=" filterName">Market :</span>
+			    <div class="btn-group filterButtonDiv" >
+			      <button type="button" class="btn btn-default dropDownButton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        {{selectedMarketUnit}}<span class="caret"></span>
+			      </button>
+			      <ul class="dropdown-menu">
+			        <li><a href="" ng-repeat="marketUnit in marketUnitKeys" ng-click="updateMarketunit(marketUnit)">{{marketUnit}}</a></li>
+			      </ul>
+			    </div>
+
+			</div>
+
+			<div class="col-md-3 col-lg-3" style="height:100%;padding-left:2%">
+				<span class=" filterName">Location :</span>
+			     <div class="btn-group  filterButtonDiv" >
+			      <button type="button" class="btn btn-default dropDownButton dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			        {{selectedLocation}}<span class="caret"></span>
+			      </button>
+			      <ul class="dropdown-menu">
+			        <li><a href="" ng-repeat="location in locationsKeys" ng-click="updateLocation(location)">{{location}}</a></li>
+			      </ul>
+			    </div>
+
+			</div>
+
+	</div>
+
+	<div id="snapshot" style="padding-top:.7%;">
+		<span style="padding-left:1%;">Snapshot <i class="fa fa-file-excel-o pull-right" style="color:green;" aria-hidden="true"></i></span>
+	</div>
+
+	<div id="graphs" class="row" style="height:89%">
+		<div class="col-md-6 col-lg-6" style="height:100%" id="leftSideGraphs">
+			<div class="row col-md-12 col-lg-12" style="height:53%;border-bottom:1px solid #00667a;padding-top:2%;padding-left:2%;margin-left:2%;" >
+				<span style="padding-top:1%;padding-left:2%;font-size:18px;color:#0f0d0b">Connectivity issues</span>
+				<div id="barChart">
+				</div>
+			</div>
+			<div class="row col-md-12 col-lg-12" style="height:55%;border-bottom:1px solid #00667a;padding-top:2%;padding-left:2%;margin-left:2%;" >
+				<span style="padding-top:1%;padding-left:2%;font-size:18px;color:#0f0d0b">Connectivity Status</span>
+				<div id="pieChart">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-6" style="height:100%;padding-right:30px;padding-top:10px;" id="rightSideGraphs">
+      <span style="padding-top:1%;padding-bottom:1%;padding-left:2%;font-size:18px;color:#0f0d0b">Equipment's Location</span>
+			<div id="geoGraph" style="height:43%; width:100%;margin-top:10px;margin-bottom:10px;">
+
+
+			</div>
+      <!-- <span style="padding-top:1%;padding-left:1%;">Equipment's Status :</span> -->
+       <span class="pull-left"><img src="images/map-marker-green.png" width="15px" height="15px"> Equipment Connected</span>
+       <span class="pull-right">Equipment Not Connected <img width="15px" height="15px" src="images/map-marker-red.png"></span>
+
+           <div class="geobox row" style="height:57%;clear:both;">
+                <div class="spireImage col-md-4 col-lg-4" style="padding:0;padding-top:5.5%;height:100%">
+
+                </div>
+                <div class= "geodetails col-md-8 col-lg-8" style="height:107%;padding-left:0;">
+                    <center>
+                    <table class="table tclass" >
+
+                    </table>
+                </center>
+                </div>
+
+            </div>
+		</div>
+	</div>
+</div>

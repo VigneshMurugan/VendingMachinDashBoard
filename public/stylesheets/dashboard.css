@@ -1,0 +1,114 @@
+div #dashboardView {
+	background-color: white;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 1%;
+	height: 100%;
+	/*overflow-y:auto;*/
+}
+
+div #filters{
+	height: 6%;
+	font-size: 14px;
+}
+
+div #snapshot{
+	height: 5%;
+	background-color: #e8ebd1;
+	color: #352e77;
+	font-size: 20px;
+
+}
+
+.bar {
+  fill: #00667a;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+
+.filterName{
+	height: 100%;
+	text-align: center;
+	/*padding-top: 8%;*/
+	margin: auto;
+	width: 30%;
+}
+.dropDownButton{
+	height: 80%;
+	font-size: 12px;
+	padding: 0;
+	width: 80%;
+
+}
+.filterButtonDiv{
+	height: 100%;
+	padding-top: 4%;
+	width: 65%;
+}
+.dropDownButton span{
+
+}
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y.axis path {
+  display: none;
+}
+
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+} 
+svg text.percent{
+	fill:white;
+	text-anchor:middle;
+	font-size:12px;
+}
+
+#leftSideGraphs{
+	border: 0;
+	border-right: 1px solid #00667a;
+
+}
+/*#pieChart{
+	border: 0;
+	border-top: 1px solid #00667a;
+	border-bottom: 1px solid #00667a;
+}*/
+/*#graphs{
+	overflow-y:auto;
+}*/
+#barChart{
+	padding-top: 3%;
+}
+#pieChart{
+	padding-top: 3%;
+}
+#headerText{
+                z-index: 999999;
+                position: absolute;
+                left: 120%;
+                top:5%;
+                width: 100%;
+                font-size: 25px
+            }

@@ -1,0 +1,290 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f3f4ed;
+  overflow-y: hidden;
+  overflow-x:hidden; 
+
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+a {
+  color: #00B7FF;
+}
+
+/*style for dashboard card*/
+      .md-headline-custom{
+        /*background: blue; /* For browsers that do not support gradients */
+        /*background: -webkit-linear-gradient(left,rgba(0,72,145,0), rgba(0,72,145,1)); /*Safari 5.1-6*/
+        /*background: -o-linear-gradient(left,rgba(0,72,145,0), rgba(0,72,145,1)); /*Opera 11.1-12*/
+        /*background: -moz-linear-gradient(left,rgba(0,72,145,0), rgba(0,72,145,1)); /*Fx 3.6-15*/
+        /*background: linear-gradient(to left, rgba(0,72,145,0), rgba(0,72,145,1)); /*Standard*/
+        /*color: aliceblue;*//*/*/
+        background-color: #FFFFFF;
+        padding: 5px;
+      }
+
+      .md-class-indicator{
+      height:100%;
+      width: 25%;
+
+      }
+      .md-class-indicator_title{
+
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+      }
+
+      .first{
+/*        padding-left: 20%;
+*/        padding-top: 20%;
+        margin-left: -12px;
+        font-size: 16px;
+      }
+      .second{
+        /*padding-left: 10%;*/
+        padding-top: 20%;
+        margin-left: -10px;
+                font-size: 16px;
+
+
+      }
+      .third{
+        /*padding-left: 10%;*/
+        padding-top: 20%;
+        margin-left: -10px;
+                font-size: 16px;
+
+
+      }
+      .fourth{
+        /*padding-left: 10%;*/
+        padding-top: 15%;
+        margin-left: -10px;
+         font-size: 16px;
+
+
+      }
+            .para_align{
+            padding-top:25px;
+            margin-top:20px;
+            font-size:150%;
+            align-content: center;
+            font-weight: bold;
+            }
+            .span_align{
+            padding-top:12px;
+            align-content: center;
+            padding-left:9%;
+            /*background-color: #ffcc33;*/
+            }
+            #first{
+            background-color: rgb(229,57,64);
+            height: 100%;
+            width: 75px;
+            line-height: 50px;
+            }
+            #second{
+        background-color: rgb(13,105,171);
+        height: 100%;
+                    width: 75px;
+            line-height: 50px;
+            padding-left:15%;
+            }
+            #third{
+          background-color: #5c5651;
+          height: 100%;
+                      width: 75px;
+            line-height: 50px;
+            padding-left:15%;
+            }
+            #fourth{
+        background-color: #d5b26e;
+        height: 100%;
+                    width: 75px;
+            line-height: 50px;
+            padding-left:15%;
+            }
+ /*end of style for dashboard cards*/
+ .cards md-content {
+    background-color: #f3f4ed;
+}
+.md-headline {
+  color: white;
+}
+
+
+
+ /*side menu css*/
+ #sideMenuDiv{
+  padding: 0;
+  height: 100%;
+ }
+ #mainDiv{
+  padding: 0;
+  height: 100%;
+  width: 100%;
+ }
+#side li a img{
+  padding-right: 5px;
+}
+#side li a:hover{
+   background-color: grey;
+   font-size: 20px;
+ }
+#side  li a{
+    color: white;
+  }
+ .sidemenuselect{
+   background-color: white;
+ }
+ .sideMenuWrapper{
+   position: absolute;
+   margin-top: 0px;
+   margin-left: 0px;
+   padding-left: 0px;
+   padding-right: 0px;
+   width: 100%;
+   height: 100%;
+   background: #00667A;
+   font-size: 14px;
+   border: 1px solid black;
+ }
+i {
+  margin-right: 5px;
+  color: white;
+  font-size: 24px;
+  /*margin-top: 22px;*/
+}
+#side {
+  margin-top: 50px;
+}
+#slidemenu{
+  background: grey;
+  color: white;
+  font-size: 12px;
+  /*height: px;*/
+}
+
+/*end of side menu css*/
+
+/*equipmentDetails css*/
+#equip{
+    margin-left: 30px;
+}
+#table1{
+    padding-left: 50px;
+}
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: white;
+/*border: 1px solid #e1e1e1; */}
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background:  #f3f4ed; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+   .table table, .table th ,.table td {
+         border: 1px solid grey;
+         border-collapse: collapse;
+         padding: 5px;
+         padding-left: 10px;
+      }
+       .table tr th{
+          background: white;
+      }
+      .table tr td{
+          background:#f3f4ed;
+      }
+     .table table{
+          background : white;
+      }
+
+    #image  {
+        height:250px;
+        width:180px;
+        background: inherit;
+        /*padding-left: 0px;
+        margin-left: 0px;*/
+    }
+    /*.table{
+        margin-top: :30px;
+    }*/
+    .row2{
+        background:white;
+        /*margin-top:150px;*/
+        margin-left: 30px;
+        height: 40px;
+    }
+    .row2 ul li{
+        display:inline;
+    }
+    .row2 ul li i{
+        color:grey;
+        margin-top: 2px;
+        margin-right:5px;
+    }
+ md-tab-item span {
+
+}
+
+/*end of equipment details*/
+
+/*rendered view css*/
+
+#renderedView{
+/*margin-top: 6%;
+padding-bottom: -6%;*/
+padding-top: 5%;
+margin-top: 1%;
+  height: 110%;
+  overflow-y:auto; 
+}
+
+/*end of rendered view*/
+
+.activeTab{
+  background-color: white;
+  color: black!important;
+}
+  .legend {
+    font-size: 12px;
+  }
+  .md-tab {
+     text-transform: none;
+ }
+
+.tclass tr  td{
+  border: none;
+  background-color: white;
+
+}
+.tclass table {
+  border:none;
+  background-color: white;
+}
+.tclass tr{
+  border: none;
+}
+
+.tclass tr td:first-child{
+  text-align: right;
+}
+
+.tclass tr:nth-child(1) td{
+  padding-top: 20px;
+  text-align:left;
+  padding-left: 55px;
+  color: #00667a;
+  font-size: 18px;
+}
+.tclass>tbody>tr>td{
+   border: none;
+}
+
+.holder{
+	height: 100px;
+}

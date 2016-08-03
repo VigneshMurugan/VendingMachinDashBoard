@@ -1,0 +1,250 @@
+<div class="container">
+           
+            <div ng-cloak="" class="carddemoCardActionButtons">
+				<md-content class="md-padding" layout-xs="column" layout="row">
+
+                    
+                    <div flex-xs="" flex-gt-xs="200" layout="column">
+                        <md-card>
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <span class="md-headline md-headline-custom">
+										Equipment View
+									</span>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content>
+                              <div id='mapContainer'>
+                              	
+                              <div id="map" style="height:500px"></div>
+                              </div>
+								<!-- <button type="button" id = "view3" name="button" class="btn btn-default btn-xs"> view3</button> -->
+                            <!-- <i class="icon-search" class="float-right" id = "icon-search"></i> -->
+
+                            <div class="geobox">
+                                <div >
+                                    <img src="images/vending_machine.png" alt="" class="chkimg" />
+                                </div>
+                                <!--<div class= "geodetails">
+                                    Equipment parameters
+                                    <center>
+                                    <table class="table tclass" >
+                                        <tr>
+                                            <td>Customer Name</td>
+                                            <td>shell cobras</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Customer Address</td>
+                                            <td>34, ist aveneue</td>
+                                        </tr>
+                                    </table>
+                                </center>
+                                </div>  geodetails ends-->
+                            </div>
+                            </md-card-content>
+                        </md-card>
+
+                        <md-card>
+
+                            <md-card-content>
+
+								<div ng-controller="equipmentController as ctrl">
+								<form ng-submit="$event.preventDefault()">
+								
+								<div class="row">
+<!--									REGION FILTER STARTS-->
+									<div class="col-md-4">
+												<div class=row>
+													<div class="col-md-4"><span class="filter-text">Region</span></div>
+													<div class="col-md-8">
+													   <md-autocomplete
+														  ng-disabled="ctrl.isDisabled"
+														  md-no-cache="ctrl.noCache"
+														  md-selected-item="ctrl.selectedRegionItem"
+														  md-search-text-change="ctrl.searchRegionChange(ctrl.searchRegion)"
+														  md-search-text="ctrl.searchRegion"
+														  md-selected-item-change="ctrl.selectedRegionChange(item)"
+														  md-items="item in ctrl.regionSearch(ctrl.searchRegion)"
+														  md-item-text="item.display"
+														  md-min-length="0"
+														  placeholder="Northern Region?">
+														  <md-item-template>
+															 <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+														  </md-item-template>
+														  <md-not-found>
+															 No regions matching "{{ctrl.searchRegion}}" were found.
+															 <a ng-click="ctrl.newState(ctrl.Region)">Create a new one!</a>
+														  </md-not-found>
+													   </md-autocomplete>
+													   <br/>
+
+													</div>
+												</div>
+				<!--								REGION FILTER ENDS -->
+									</div>
+									<div class="col-md-4">
+				<!--								MARKET UNIT FILTER STARTS-->
+
+													<div class=row>
+													<div class="col-md-4"><span class="filter-text">Market</span></div>
+													<div class="col-md-8">
+													   <md-autocomplete
+														  ng-disabled="ctrl.isDisabled"
+														  md-no-cache="ctrl.noCache"
+														  md-selected-item="ctrl.selectedMunitItem"
+														  md-search-text-change="ctrl.searchMunitChange(ctrl.searchMunit)"
+														  md-search-text="ctrl.searchMunit"
+														  md-selected-item-change="ctrl.selectedMunitChange(item)"
+														  md-items="item in ctrl.munitSearch(ctrl.searchMunit)"
+														  md-item-text="item.display"
+														  md-min-length="0"
+														  placeholder="Midwest region?">
+														  <md-item-template>
+															 <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+														  </md-item-template>
+														  <md-not-found>
+															 No market units matching "{{ctrl.searchMunit}}" were found.
+															 <a ng-click="ctrl.newState(ctrl.Munit)">Create a new one!</a>
+														  </md-not-found>
+													   </md-autocomplete>
+													   <br/>
+
+													</div>
+												</div>
+				<!--								MARKET UNIT FILTER ENDS-->
+									</div>
+									<div class="col-md-4">
+				<!--								LOCATION FILTER STARTS-->
+												<div class=row>
+													<div class="col-md-4"><span class="filter-text">Location</span></div>
+													<div class="col-md-8">
+													   <md-autocomplete
+														  ng-disabled="ctrl.isDisabled"
+														  md-no-cache="ctrl.noCache"
+														  md-selected-item="ctrl.selectedLocationItem"
+														  md-search-text-change="ctrl.searchLocationChange(ctrl.searchLocation)"
+														  md-search-text="ctrl.searchLocation"
+														  md-selected-item-change="ctrl.selectedLocationChange(item)"
+														  md-items="item in ctrl.locationSearch(ctrl.searchLocation)"
+														  md-item-text="item.display"
+														  md-min-length="0"
+														  placeholder="Northern Location?">
+														  <md-item-template>
+															 <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+														  </md-item-template>
+														  <md-not-found>
+															 No Locations matching "{{ctrl.searchLocation}}" were found.
+															 <a ng-click="ctrl.newState(ctrl.Location)">Create a new one!</a>
+														  </md-not-found>
+													   </md-autocomplete>
+													   <br/>
+
+													</div>
+												</div>
+				<!--								LOCATION FILTER ENDS -->
+										</div>
+								</div>
+<!--								COF FILTER STARTS-->
+								<div class=row>
+<!--								COF FILTER STARTS-->
+									<div class="col-md-4 col-lg-4">
+											<div class="col-md-4"><span class="filter-text">Key Account:</span></div>
+												<div class="col-md-8">
+												  <md-autocomplete
+												 ng-disabled="ctrl.isDisabled"
+												 md-no-cache="ctrl.noCache"
+												 md-selected-item="ctrl.selectedCofItem"
+												 md-search-text-change="ctrl.searchCofChange(ctrl.searchCof)"
+												 md-search-text="ctrl.searchCof"
+												 md-selected-item-change="ctrl.selectedCofChange(item)"
+												 md-items="item in ctrl.cofSearch(ctrl.searchCof)"
+												 md-item-text="item.display"
+												 md-min-length="0"
+												 placeholder="Northern Region?">
+												 <md-item-template>
+												<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+												 </md-item-template>
+												 <md-not-found>
+												No Cofs matching "{{ctrl.searchCof}}" were found.
+												<a ng-click="ctrl.newState(ctrl.Cof)">Create a new one!</a>
+												 </md-not-found>
+												  </md-autocomplete>
+												  <br/>
+
+												</div>
+									</div>
+
+<!--								COF FILTER ENDS -->
+									<div class="col-md-4 col-lg-4">
+										<div class=row>
+											<div class="col-md-4"><span class="filter-text">COF#</span></div>
+											<div class="col-md-8">
+											   <md-autocomplete
+												  ng-disabled="ctrl.isDisabled"
+												  md-no-cache="ctrl.noCache"
+												  md-selected-item="ctrl.selectedCofItem"
+												  md-search-text-change="ctrl.searchCofChange(ctrl.searchCof)"
+												  md-search-text="ctrl.searchCof"
+												  md-selected-item-change="ctrl.selectedCofChange(item)"
+												  md-items="item in ctrl.cofSearch(ctrl.searchCof)"
+												  md-item-text="item.display"
+												  md-min-length="0"
+												  placeholder="Northern Cof?">
+												  <md-item-template>
+													 <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+												  </md-item-template>
+												  <md-not-found>
+													 No Cofs matching "{{ctrl.searchCof}}" were found.
+													 <a ng-click="ctrl.newState(ctrl.Cof)">Create a new one!</a>
+												  </md-not-found>
+											   </md-autocomplete>
+											   <br/>
+
+											</div>
+										</div>
+									</div>
+<!--								COF FILTER ENDS -->
+<!--			CUSTOMER FILTER STARTS						-->
+									<div class="col-md-4 col-lg-4">
+										<div class="col-md-4"><span class="filter-text">Customer</span></div>
+											<div class="col-md-8">
+											  <md-autocomplete
+											 ng-disabled="ctrl.isDisabled"
+											 md-no-cache="ctrl.noCache"
+											 md-selected-item="ctrl.selectedCustomerItem"
+											 md-search-text-change="ctrl.searchCustomerChange(ctrl.searchCustomer)"
+											 md-search-text="ctrl.searchCustomer"
+											 md-selected-item-change="ctrl.selectedCustomerChange(item)"
+											 md-items="item in ctrl.customerSearch(ctrl.searchCustomer)"
+											 md-item-text="item.display"
+											 md-min-length="0"
+											 placeholder="Customer ">
+											 <md-item-template>
+											<span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+											 </md-item-template>
+											 <md-not-found>
+											No Customer matching "{{ctrl.searchCustomer}}" were found.
+											<a ng-click="ctrl.newState(ctrl.Customer)">Create a new one!</a>
+											 </md-not-found>
+											  </md-autocomplete>
+											  <br/>
+
+											</div>
+									</div>
+<!--			CUSTOMER FILTER ENDS						-->
+									</div> 
+<!--									div end for second row-->
+								</form>
+								  <div id="grid1" ui-grid="gridOptions" ui-grid-selection ui-grid-expandable class="grid" style='width:1060px; '>
+                            </md-card-content>
+                        </md-card>
+                    </div>
+				
+         
+                </md-content>
+            </div>
+            <div class="holder">
+				
+			</div>
+
+        </div>
